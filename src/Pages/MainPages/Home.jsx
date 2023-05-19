@@ -1,9 +1,9 @@
-import React, { useContext, useEffect } from "react";
+import { useContext, useEffect } from "react";
 import { ThemeContext } from "../../App";
 import HeroSection from "../../Components/HerpSection/HeroSection";
 import Footer from "../../Components/HeaderFooter/Footer";
 import DigitalCreative from "../../Components/DigitalCreative/DigitalCreative";
-import OurServices from "../../Components/OurServuces/OurServices";
+import OurServices from "../../Components/OurServices/OurServices";
 import OurGoals from "../../Components/OurGoals/OurGoals";
 import Testimonials from "../../Components/Testimonials/Testimonials";
 import FeaturedWork from "../../Components/FeaturedWork/FeaturedWork";

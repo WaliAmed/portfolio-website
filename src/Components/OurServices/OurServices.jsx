@@ -1,7 +1,6 @@
-import React from "react";
 import Card1 from "../Cards/Card1";
 import patch2 from "../../assets/Images/patch2.svg";
-import patch3 from "../../assets/Images/patch3.svg";
+import patch3 from "../../assets/Images/Patch3.svg";
 
 function OurServices() {
   return (
@@ -17,7 +16,6 @@ function OurServices() {
         <Card1 />
         <Card1 />
         <Card1 />
-
         <Card1 />
         <Card1 />
         <Card1 />
