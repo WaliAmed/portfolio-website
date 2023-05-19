@@ -1,4 +1,3 @@
-import React from "react";
 import patch2 from "../../assets/Images/patch2.svg";
 
 function OurGoals() {

@@ -1,4 +1,3 @@
-import React from "react";
 import logo1 from "../../assets/Images/logo1.svg";
 import logo2 from "../../assets/Images/logo2.svg";
 import logo3 from "../../assets/Images/logo3.svg";
@@ -9,7 +8,7 @@ import logo6 from "../../assets/Images/logo4.svg";
 import logo6a from "../../assets/Images/logo6a.svg";
 import logo7 from "../../assets/Images/logo7.svg";
 import logo7a from "../../assets/Images/logo7a.svg";
-import patch from "../../assets/Images/patch.svg";
+import patch from "../../assets/Images/Patch.svg";
 
 function DigitalCreative() {
   return (
