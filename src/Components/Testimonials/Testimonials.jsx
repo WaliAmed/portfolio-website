@@ -1,10 +1,7 @@
-import React from "react";
 import Card2 from "../Cards/Card2";
 import { TestimonialText, TestimonialText2 } from "../../TextData";
-import star from "../../assets/Images/icons/star.svg";
-import star2 from "../../assets/Images/icons/star2.svg";
-
-import { AiOutlineStar } from "react-icons/ai";
+import star from "../../assets/Images/icons/Star.svg";
+import star2 from "../../assets/Images/icons/Star2.svg";
 
 function Testimonials() {
   return (
