@@ -1,0 +1,115 @@
+@font-face {
+    font-family: 'Chillax-Light';
+    src: url('./assets/Fonts/Chillax_Complete/Fonts/WEB/fonts/Chillax-Light.woff2') format('woff2'),
+         url('./assets/Fonts/Chillax_Complete/Fonts/WEB/fonts/Chillax-Light.woff') format('woff'),
+         url('./assets/Fonts/Chillax_Complete/Fonts/WEB/fonts/Chillax-Light.eot') format('truetype');
+         font-weight: 300;
+         font-display: swap;
+         font-style: normal;
+  }
+
+
+  @font-face {
+    font-family: 'Satoshi-Regular';
+    src: url('./assets/Fonts/Satoshi_Complete/Fonts/WEB/fonts/Satoshi-Regular.woff2') format('woff2'),
+         url('./assets/Fonts/Satoshi_Complete/Fonts/WEB/fonts/Satoshi-Regular.woff') format('woff'),
+         url('./assets/Fonts/Satoshi_Complete/Fonts/WEB/fonts/Satoshi-Regular.ttf') format('truetype');
+         font-weight: 400;
+         font-display: swap;
+         font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Satoshi-Light';
+    src: url('./assets/Fonts/Satoshi_Complete/Fonts/WEB/fonts/Satoshi-Light.woff2') format('woff2'),
+         url('./assets/Fonts/Satoshi_Complete/Fonts/WEB/fonts/Satoshi-Light.woff') format('woff'),
+         url('./assets/Fonts/Satoshi_Complete/Fonts/WEB/fonts/Satoshi-Light.ttf') format('truetype');
+         font-weight: 300;
+         font-display: swap;
+         font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Satoshi-Light-Italic';
+    src: url('./assets/Fonts/Satoshi_Complete/Fonts/WEB/fonts/Satoshi-LightItalic.woff2') format('woff2'),
+         url('./assets/Fonts/Satoshi_Complete/Fonts/WEB/fonts/Satoshi-LightItalic.woff') format('woff'),
+         url('./assets/Fonts/Satoshi_Complete/Fonts/WEB/fonts/Satoshi-LightItalic.ttf') format('truetype');
+         font-weight: 300;
+         font-display: swap;
+         font-style: italic;
+  }
+
+  
+@font-face {
+    font-family: 'Satoshi-Medium';
+    src:  url('./assets/Fonts/Satoshi_Complete/Fonts/WEB/fonts/Satoshi-Medium.woff2') format('woff2'),
+    url('./assets/Fonts/Satoshi_Complete/Fonts/WEB/fonts/Satoshi-Medium.woff') format('woff'),
+    url('./assets/Fonts/Satoshi_Complete/Fonts/WEB/fonts/Satoshi-Medium.ttf') format('truetype');
+         font-weight: 500;
+         font-display: swap;
+         font-style: normal;
+  }
+
+ .swiper-slide-active {
+    margin-right: 0px !important;
+  }
+
+  .swiper-slide {
+    margin-right: 0px !important;
+  }
+
+  .satoshi-medium {
+    font-family: 'Satoshi-Medium';
+  }
+
+  .satoshi-light {
+    font-family: 'Satoshi-Light';
+  }
+
+  .satoshi-light-italic {
+    font-family: 'Satoshi-Light-Italic';
+  }
+
+
+  *{
+    --BaseColor1: #010530;
+    --BaseColor2: #060B54;
+    font-family: "Chillax-Light" ;
+}
+
+
+
+.main-bg {
+    background: linear-gradient(to right, var(--BaseColor1), var(--BaseColor2), var(--BaseColor1) );
+    font-family: 'Chillax-Light';
+}
+
+.hero-image{
+    background: url("./assets/Images/HeroImage.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.goals-image{
+    background: url("./assets/Images/GoalsImage.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.aims-image{
+    background: url("./assets/Images/OurAims.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
