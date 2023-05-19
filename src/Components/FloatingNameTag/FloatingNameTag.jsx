@@ -1,5 +1,4 @@
-import React, { useRef, useState } from "react";
-import heart from "../../assets/Images/icons/heart.svg";
+import heart from "../../assets/Images/icons/Heart.svg";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";

@@ -1,4 +1,3 @@
-import React from "react";
 import { BsArrowUp } from "react-icons/bs";
 import { BiPhone } from "react-icons/bi";
 import { FiMail } from "react-icons/fi";
