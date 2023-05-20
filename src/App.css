@@ -105,6 +105,13 @@
     background-size: cover;
 }
 
+.footer-image{
+  background: url("./assets/Images/FooterImage.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 
 
 

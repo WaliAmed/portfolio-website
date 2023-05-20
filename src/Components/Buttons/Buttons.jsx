@@ -5,7 +5,7 @@ function Buttons({ onClick, ButtonTitle, type }) {
     <button
       style={{ fontFamily: "Satoshi-Regular" }}
       className={
-        "py-2 px-6 mt-5 text-sm md:mt-0 w-fit md:w-fit bg-white text-black md:block"
+        "py-2 px-6 mt-5 rounded-sm text-sm md:mt-0 w-fit md:w-fit bg-white text-black md:block"
       }
       onClick={onClick}
       type={type}
