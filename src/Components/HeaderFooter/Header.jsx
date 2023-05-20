@@ -17,7 +17,7 @@ function Header() {
     <div
       style={{ fontFamily: "Satoshi-Regular" }}
       className={
-        "w-full h-[100px] footer-image text-white/80 flex justify-center -mb-32 z-50"
+        "w-full h-[100px] text-white/80 flex justify-center -mb-32 z-50"
       }
     >
       <div className="w-[90%] h-full flex items-center justify-between py-1">

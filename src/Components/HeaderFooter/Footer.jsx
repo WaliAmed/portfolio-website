@@ -13,7 +13,7 @@ const Footer = () => {
   };
 
   return (
-    <div className="footer-background-gradient w-full text-white bg-[#07092D]">
+    <div className="footer-background-gradient footer-image w-full text-white bg-[#07092D]">
       <footer
         aria-label="Site Footer"
         className="footer-background-gradient w-full "
@@ -168,7 +168,10 @@ const Footer = () => {
                 Khalid.
               </p>
 
-              <span className="hidden lg:flex items-center space-x-5 pr-20 cursor-pointer">
+              <span
+                onClick={ScrollToTop}
+                className="hidden lg:flex items-center space-x-5 pr-20 cursor-pointer"
+              >
                 <p
                   style={{ fontFamily: "'Times New Roman', Times, serif" }}
                   className=" text-white/70 ml-1"
@@ -176,10 +179,7 @@ const Footer = () => {
                   TO TOP
                 </p>
 
-                <span
-                  onClick={ScrollToTop}
-                  className="border border-gray-500/50 rounded-full"
-                >
+                <span className="border border-gray-500/50 rounded-full">
                   <BsArrowUp className="m-[12px]" />
                 </span>
               </span>
