@@ -36,3 +36,53 @@ export const TestimonialText2 = [
     desig: "CEO, textile business",
   },
 ];
+
+export const OurServicesText = [
+  {
+    id: "01",
+    title: "WEB DESIGNING & UI/UX",
+    desc: "Visually stunning web and mobile app designs that captivate your audience by blending brand voice and customer needs",
+  },
+
+  {
+    id: "02",
+    title: "SOCIAL MEDIA",
+    desc: "Full range of social media management services from content creation to community management",
+  },
+
+  {
+    id: "03",
+    title: "SEO",
+    desc: "Proven SEO strategies that enhance your online performance, bringing you to the forefront of organic search results",
+  },
+  {
+    id: "04",
+    title: "CONTENT WRITING",
+    desc: "Assuring effective communication with your audience through blog posts, articles, social media posts, email newsletters, and more",
+  },
+  {
+    id: "05",
+    title: "LOGOS",
+    desc: "From concept development to final design, creating a cohesive and consistent brand identity through our logos",
+  },
+  {
+    id: "06",
+    title: "PAINTING & CALLIGRAPHY",
+    desc: "Beautiful and captivating paintings and art to capture the essence of your imagination and display it as a treat for the eyes",
+  },
+  {
+    id: "07",
+    title: "BRANDING & B-PACKAGING",
+    desc: "Creating a distinct identity for your business in the mind of your audience and production -ready artwork for brand packaging   ",
+  },
+  {
+    id: "08",
+    title: "ILLUSTRATIONS",
+    desc: "Providing visual clarity through a wide range of illustrations and graphic design to better understand brand concept and tone",
+  },
+  {
+    id: "09",
+    title: "PORTRAITURE  ",
+    desc: "Modern, fun and creative portraits of images or likeness of people using light and raw, simple posing that captivates the viewer",
+  },
+];
