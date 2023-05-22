@@ -50,6 +50,16 @@
          font-style: normal;
   }
 
+  @font-face {
+    font-family: 'Satoshi-Bold';
+    src:  url('./assets/Fonts/Satoshi_Complete/Fonts/WEB/fonts/Satoshi-Bold.woff2') format('woff2'),
+    url('./assets/Fonts/Satoshi_Complete/Fonts/WEB/fonts/Satoshi-Bold.woff') format('woff'),
+    url('./assets/Fonts/Satoshi_Complete/Fonts/WEB/fonts/Satoshi-Bold.ttf') format('truetype');
+         font-weight: 500;
+         font-display: swap;
+         font-style: normal;
+  }
+
  .swiper-slide-active {
     margin-right: 0px !important;
   }
@@ -68,6 +78,10 @@
 
   .satoshi-light-italic {
     font-family: 'Satoshi-Light-Italic';
+  }
+
+  .satoshi-bold {
+    font-family: 'Satoshi-Bold';
   }
 
 
@@ -89,6 +103,20 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.about-image{
+  background: url("./assets/Images/AboutImage.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.team-image{
+  background: radial-gradient(rgba(3, 3, 100, 0.40) 10%, rgba(28, 28, 28, 0.388) 90%), url("./assets/Images/Team.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .goals-image{

@@ -5,7 +5,7 @@ function OurGoals() {
     <>
       <div className="w-full relative py-20 lg:h-screen flex flex-col justify-center items-center text-white/80">
         <div className="w-10/12 z-10 h-full py-10 lg:py-0 lg:h-[85%] goals-image flex justify-center items-center">
-          <div className="w-10/12 h-10/12 lg:h-2/3 backdrop-blur-md bg-[#203764]/10 p-5 lg:p-10 text-center flex flex-col justify-center items-center">
+          <div className="w-10/12 border border-blue-300/30 h-10/12 lg:h-2/3 backdrop-blur-md bg-[#203764]/10 p-5 lg:p-10 text-center flex flex-col justify-center items-center">
             <h2 className="lg:text-lg satoshi-medium tracking-widest font-semibold">
               Our Goals
             </h2>

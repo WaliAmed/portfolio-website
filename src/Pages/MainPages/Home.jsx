@@ -44,10 +44,6 @@ function Home() {
       <section>
         <Contact />
       </section>
-
-      <footer>
-        <Footer />
-      </footer>
     </div>
   );
 }
