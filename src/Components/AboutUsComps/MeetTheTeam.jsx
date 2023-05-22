@@ -7,13 +7,24 @@ import black3 from "../../assets/Images/MeetTheTeam/BlackPatch3.svg";
 
 function MeetTheTeam() {
   return (
-    <div className="w-9/12 h-[80vh] team-image my-20 relative flex">
-      <img src={CHead} alt="" className="w-[30px] absolute left-3 top-[18%]" />
-      <img src={MTeam} alt="" className="w-[30px] absolute right-3 top-[18%]" />
+    <div className="w-full lg:w-9/12 h-full py-10 lg:py-0 lg:h-[80vh] team-image my-20 relative flex flex-col lg:flex-row">
+      <p className="satoshi-bold block lg:hidden text-4xl tracking-widest pb-10 text-transparent text-center bg-clip-text bg-gradient-to-b from-white/80 to-black/10">
+        Meet The Team
+      </p>
+      <img
+        src={CHead}
+        alt=""
+        className="w-[30px] hidden lg:block absolute left-3 top-[18%]"
+      />
+      <img
+        src={MTeam}
+        alt=""
+        className="w-[30px] hidden lg:block absolute right-3 top-[18%]"
+      />
 
       {/* LHS  */}
-      <div className="w-2/3 flex flex-col space-y-2 justify-center items-center">
-        <span className="w-full flex pl-20 items-center pr-10">
+      <div className="w-full lg:w-2/3 flex flex-col items-center space-y-2 justify-center lg:items-center">
+        <span className="w-full px-20 lg:px-0 text-center lg:text-start flex flex-col lg:flex-row lg:pl-20 items-center lg:pr-10">
           <img src={black} alt="" className="w-[200px]" />
 
           <p className="satoshi-medium text-[#E6E6E6] text-xs tracking-widest">
@@ -23,7 +34,7 @@ function MeetTheTeam() {
           </p>
         </span>
 
-        <span className="w-full flex pl-20 items-center pr-10">
+        <span className="w-full px-20 lg:px-0 text-center lg:text-start flex flex-col lg:flex-row lg:pl-20 items-center lg:pr-10">
           <img src={black2} alt="" className="w-[200px]" />
 
           <p className="satoshi-medium text-[#E6E6E6] text-xs tracking-widest">
@@ -35,7 +46,7 @@ function MeetTheTeam() {
       </div>
 
       {/* RHS */}
-      <div className="w-1/3 flex justify-center items-center pr-14">
+      <div className="w-full mt-10 lg:mt-0 lg:w-1/3 flex justify-center items-center lg:pr-14">
         {/* <img src={black2} alt="" className="w-[400px]" /> */}
         <span className="w-[240px] h-[240px] bg-gradient-to-b from-[#212336]/50 via-[#212336]/30 to-[#212336]/50 border border-gray-300/30 rounded-full shadow-lg shadow-gray-900 text-center flex flex-col items-center justify-center px-10 space-y-5">
           <p className="satoshi-medium text-[10px]">OUR TEAM</p>

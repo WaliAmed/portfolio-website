@@ -7,9 +7,9 @@ import rect from "../../assets/Images/Chart/RectangleBar.svg";
 
 function Stats() {
   return (
-    <div className="w-full flex">
+    <div className="w-full flex flex-col lg:flex-row">
       {/* LHS  */}
-      <div className="w-8/12 pl-36 grid grid-cols-4 place-items-center gap-y-20">
+      <div className="w-full lg:w-8/12 lg:pl-36 grid grid-cols-2 lg:grid-cols-4 place-items-center gap-y-20">
         <Counter number={500} title={"CLIENTS"} />
         <Counter number={75} title={"LOGOS"} />
         <Counter number={45} title={"WEB DESIGNS"} />
@@ -21,7 +21,7 @@ function Stats() {
       </div>
 
       {/* RHS  */}
-      <div className="w-4/12 relative flex flex-col items-center justify-center ">
+      <div className="w-full mt-20 lg:mt-0 py-[100px] lg:py-0 lg:w-4/12 relative flex flex-col items-center justify-center ">
         <p className="satoshi-light text-xs absolute top-3">SUCCESS RATE</p>
 
         <img src={main} alt="" className="absolute z-10 w-[120px]" />

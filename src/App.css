@@ -119,6 +119,15 @@
   background-size: cover;
 }
 
+@media only screen and (max-width: 600px) {
+  .team-image{
+    background: radial-gradient(rgba(3, 3, 100, 0.8) 10%, rgba(28, 28, 28, 0.8) 90%), url("./assets/Images/Team.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
 .goals-image{
     background: url("./assets/Images/GoalsImage.svg");
     background-position: center;

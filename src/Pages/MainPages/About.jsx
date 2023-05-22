@@ -21,7 +21,7 @@ function About() {
         <HeadingTags Tag={"ABOUT US"} />
       </div>
 
-      <div className="w-[75%] lg:w-[65%] z-50 about-image h-[70vh] flex justify-center items-center">
+      <div className="w-[75%] lg:w-[65%] z-30 about-image h-[70vh] flex justify-center items-center">
         <div className="w-10/12 lg:w-2/3 lg:h-[60%] border border-blue-300/30 text-[35px] lg:text-[60px] backdrop-blur-md bg-transparent p-10 text-center flex flex-col justify-center items-center">
           <h2 className="">You imagine it</h2>
           <h2 className="">We deliver it</h2>
