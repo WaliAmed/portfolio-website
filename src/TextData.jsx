@@ -86,3 +86,40 @@ export const OurServicesText = [
     desc: "Modern, fun and creative portraits of images or likeness of people using light and raw, simple posing that captivates the viewer",
   },
 ];
+
+export const PrivacyText = [
+  {
+    title: "Privacy Policy",
+    desc: "Your Personal Information is kept accurate, private, and secure as part of our commitment. Our privacy policy sets down the rules for how we will collect, use, and disclose personal information as part of this promise.",
+  },
+];
+
+export const PaymentText = [
+  {
+    title: "Payment policy",
+    point1: "We take only online payments",
+    point2:
+      "After you have confirmed your order with us on whatsapp, you can make your online payment on any one of the following:",
+    h1: "bank transfer",
+    bankName: "xxxxx",
+    accountName: "xxxxx",
+    iban: "xxxxx",
+    epAccountName: "xxxxx",
+    phoneNumber: "03xxxxxxxxx",
+    desc: "send the screenshot of payment as proof to book your order on whatsapp.",
+    rPoint1:
+      "YOU CAN CANCEL YOUR ORDER IN THE FIRST 24 HOURS AND your payment will be fully refunded.",
+    rPoint2:
+      "After 24 hours, you may cancel your order but your payment will not be refunded.",
+  },
+];
+
+export const TermsText = [
+  {
+    line1:
+      "We work hard to provide the best products we can and to specify clear guidelines for everyone who uses them. Our products, however, are provided as is, and we make no guarantees that they will always be safe, secure or error-free, or that they will function without disruptions, delays or imperfections. To the extent permitted by law. We cannot predict when issues may arise with our products. Accordingly, our liability shall be limited to the fullest extent permitted by applicable law, and under no circumstances will we be liable to you for any lost profits, revenues, information or consequential, special, indirect, exemplary, punitive or incidental damages arising out of or related to these terms of the products, even if we have been advised of the possibility of such damages. You agree to the terms and conditions that the site you have read understood and agree to be bound by all of these terms and conditions. If you do not agree with all of these terms and conditions then you are prohibited from using the site.Also we will alert you about any changes related to your projects. Tricks, defrauding or misleading us will lead us to take strict legal actions against you. If you make improper use of our support or services, or submit false reports of abuse or misconduct, it will be unacceptable. Harassing, annoying, threatening or intimidating any of of our employees will lead to legal actions.",
+
+    line2:
+      " All your information will stay confidential and payment will be half in advance you will also get a confirmation of your payment so that we can avoid any misconception.",
+  },
+];

@@ -1,16 +1,28 @@
+import { useState } from "react";
+import PrivacyPolicyModal from "../Modal/PrivacyPolicyModal";
+
+// icons
 import { BsArrowUp } from "react-icons/bs";
 import { BiPhone } from "react-icons/bi";
 import { FiMail } from "react-icons/fi";
+import { AiOutlineInstagram } from "react-icons/ai";
 
+// images
 import ALeft from "../../assets/Images/logo/ALeft.svg";
 import white_logo from "../../assets/Images/logo/WhiteFullLogo.svg";
 import ARight from "../../assets/Images/logo/ARight.svg";
-import { AiOutlineInstagram } from "react-icons/ai";
+
+// TEXTS
+import { PrivacyText, PaymentText, TermsText } from "../../TextData";
+import TermsConditions from "../Modal/TermsConditions";
 
 const Footer = () => {
   const ScrollToTop = () => {
     window.scrollTo(0, 0);
   };
+
+  const [showModal, setShowModal] = useState(0);
+  const [showTermsModal, setShowTermsModal] = useState(false);
 
   return (
     <div className="footer-background-gradient footer-image w-full text-white bg-[#07092D]">
@@ -131,8 +143,8 @@ const Footer = () => {
                   <ul className="space-y-4 text-sm ">
                     <li>
                       <a
-                        className="text-gray-300 transition hover:text-gray-100/75 font-thin flex items-center justify-center lg:justify-start"
-                        href="/"
+                        onClick={() => setShowModal(2)}
+                        className="text-gray-300 cursor-pointer transition hover:text-gray-100/75 font-thin flex items-center justify-center lg:justify-start"
                       >
                         PAYMENT POLICY
                       </a>
@@ -140,21 +152,37 @@ const Footer = () => {
 
                     <li>
                       <a
-                        className="text-gray-300 transition hover:text-gray-100/75 flex items-center justify-center lg:justify-start"
-                        href="/"
+                        onClick={() => setShowModal(1)}
+                        className="text-gray-300 cursor-pointer transition hover:text-gray-100/75 flex items-center justify-center lg:justify-start"
                       >
                         PRIVACY POLICY
                       </a>
                     </li>
 
+                    {showModal === 1 || showModal === 2 ? (
+                      <PrivacyPolicyModal
+                        showModal={showModal}
+                        setShowModal={setShowModal}
+                        PrivacyText={PrivacyText}
+                        PaymentText={PaymentText}
+                      />
+                    ) : null}
+
                     <li>
                       <a
-                        className="text-gray-300 transition hover:text-gray-100/75 flex items-center justify-center lg:justify-start"
-                        href="/"
+                        onClick={() => setShowTermsModal(true)}
+                        className="text-gray-300 cursor-pointer transition hover:text-gray-100/75 flex items-center justify-center lg:justify-start"
                       >
                         TERMS & CONDITIONS
                       </a>
                     </li>
+
+                    {showTermsModal === true ? (
+                      <TermsConditions
+                        setShowTermsModal={setShowTermsModal}
+                        TermsText={TermsText}
+                      />
+                    ) : null}
                   </ul>
                 </nav>
               </div>
