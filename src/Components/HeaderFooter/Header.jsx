@@ -118,9 +118,9 @@ function Header() {
               className={
                 " text-[16px] hover:border-b-[2px] hover:border-white pt-2 pb-2 pr-3 px-0 mx-0 transition-colors duration-300"
               }
-              to="/contact"
+              to="/portfolio"
             >
-              Contact Us
+              Portfolio
             </NavLink>
 
             <Buttons
@@ -212,9 +212,9 @@ function Header() {
                         // backgroundColor: isActive ? "var(--btn-bgColor2)" : "",
                       })}
                       className="w-full py-2 pl-5 text-lg text-start  font-bold  transition-colors duration-300"
-                      to="/contact"
+                      to="/portfolio"
                     >
-                      Contact Us
+                      Portfolio
                     </NavLink>
                   </div>
                   <span className="border-dotted text-black">{""}</span>

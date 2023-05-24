@@ -128,6 +128,13 @@
   }
 }
 
+.portfolio-image{
+  background: url("./assets/Images/PortfolioImage.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .goals-image{
     background: url("./assets/Images/GoalsImage.svg");
     background-position: center;

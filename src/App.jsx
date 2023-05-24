@@ -5,6 +5,7 @@ import Error404 from "./Pages/ExtraPages/Error404";
 import Home from "./Pages/MainPages/Home";
 import About from "./Pages/MainPages/About";
 import Footer from "./Components/HeaderFooter/Footer";
+import Portfolio from "./Pages/MainPages/Portfolio";
 export const ThemeContext = createContext();
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
             <>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
+              <Route path="/portfolio" element={<Portfolio />} />
 
               <Route path="*" element={<Error404 />} />
             </>
