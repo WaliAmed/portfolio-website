@@ -15,6 +15,23 @@ import CIL3 from "../../assets/Images/Portfolio/CoupleIllustration/CIL3.svg";
 import ILS1 from "../../assets/Images/Portfolio/Illustrations/ILS1.svg";
 import ILS2 from "../../assets/Images/Portfolio/Illustrations/ILS2.svg";
 import ILS3 from "../../assets/Images/Portfolio/Illustrations/ILS3.svg";
+import Logo1 from "../../assets/Images/Portfolio/Logos/Logo1.svg";
+import Logo2 from "../../assets/Images/Portfolio/Logos/Logo2.svg";
+import Logo3 from "../../assets/Images/Portfolio/Logos/Logo3.svg";
+import Painting1 from "../../assets/Images/Portfolio/Painting/Painting1.svg";
+import Painting2 from "../../assets/Images/Portfolio/Painting/Painting2.svg";
+import Painting3 from "../../assets/Images/Portfolio/Painting/Painting3.svg";
+import Social1 from "../../assets/Images/Portfolio/Social/Social1.svg";
+import Social2 from "../../assets/Images/Portfolio/Social/Social2.svg";
+import Social3 from "../../assets/Images/Portfolio/Social/Social3.svg";
+import Pot1 from "../../assets/Images/Portfolio/Potraitures/Pot1.svg";
+import Pot2 from "../../assets/Images/Portfolio/Potraitures/Pot2.svg";
+import Pot3 from "../../assets/Images/Portfolio/Potraitures/Pot3.svg";
+import Web1 from "../../assets/Images/Portfolio/WebUI/Web1.svg";
+import Web2 from "../../assets/Images/Portfolio/WebUI/Web2.svg";
+import Web3 from "../../assets/Images/Portfolio/WebUI/Web3.svg";
+import { RxArrowTopRight } from "react-icons/rx";
+import Transparent from "../../Components/Buttons/Transparent";
 
 function Portfolio() {
   const { setHeaderShow } = useContext(ThemeContext);
@@ -41,18 +58,33 @@ function Portfolio() {
     },
     {
       title: "LOGOS",
+      img1: Logo1,
+      img2: Logo2,
+      img3: Logo3,
     },
     {
       title: "CALLIGRAPHY & PAINTING",
+      img1: Painting1,
+      img2: Painting2,
+      img3: Painting3,
     },
     {
       title: "SOCIAL MEDIA",
+      img1: Social1,
+      img2: Social2,
+      img3: Social3,
     },
     {
       title: "POTRAITURES",
+      img1: Pot1,
+      img2: Pot2,
+      img3: Pot3,
     },
     {
       title: "WEB DESIGN & UX/UX",
+      img1: Web1,
+      img2: Web2,
+      img3: Web3,
     },
   ];
 
@@ -84,8 +116,8 @@ function Portfolio() {
         </div>
       </div>
 
-      <section className="w-full py-20 flex justify-center">
-        <div className="w-10/12 grid grid-cols-3 gap-y-14 place-items-center">
+      <section className="w-full pt-20 pb-10 lg:py-20 flex flex-col items-center">
+        <div className="w-10/12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-14 place-items-center">
           {PortfolioCardData?.map((item, index) => {
             return (
               <>
@@ -101,6 +133,13 @@ function Portfolio() {
           })}
         </div>
       </section>
+
+      <span className="w-full mb-20 lg:mb-10 flex justify-center space-x-3">
+        <div className="w-fit rounded-full border border-white/20 -ml-3">
+          <RxArrowTopRight className="m-1 text-sm" />
+        </div>
+        <Transparent ButtonTitle={"VIEW ALL"} />
+      </span>
 
       <div className="w-full mt-20 hidden lg:flex whitespace-nowrap space-x-5 p-3 border border-blue-300/20 backdrop-blur-lg bg-white/10 ">
         <FloatingNameTag />
