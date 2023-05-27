@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "../../App.css";
 import { RiMenu4Fill } from "react-icons/ri";
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import Buttons from "../Buttons/Buttons";
 import { MdClose } from "react-icons/md";
 import ALeft from "../../assets/Images/logo/ALeft.svg";
@@ -11,7 +11,18 @@ import ARight from "../../assets/Images/logo/ARight.svg";
 function Header() {
   const [Menu, setMenu] = useState(false);
 
-  let navigate = useNavigate();
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const { hash } = location;
+    if (hash) {
+      const element = document.querySelector(hash);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [location]);
 
   return (
     <div
@@ -98,13 +109,12 @@ function Header() {
             <NavLink
               end
               style={({ isActive }) => ({
-                borderBottom: isActive ? "2px solid white" : "",
                 fontFamily: "Satoshi-Regular",
               })}
               className={
                 " text-[16px] hover:border-b-[2px] hover:border-white pt-2 pb-2 px-0 mx-0 transition-colors duration-300"
               }
-              to="/services"
+              to="/#services"
             >
               Services
             </NavLink>
@@ -198,7 +208,7 @@ function Header() {
                         // backgroundColor: isActive ? "var(--btn-bgColor2)" : "",
                       })}
                       className="w-full py-2 pl-5 text-lg tracking-wider font-bold text-start transition-colors duration-300"
-                      to="/services"
+                      to="/#services"
                     >
                       Services
                     </NavLink>

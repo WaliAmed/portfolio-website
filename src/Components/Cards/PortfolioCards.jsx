@@ -1,8 +1,10 @@
 import React from "react";
 import Transparent from "../Buttons/Transparent";
 import { RxArrowTopRight } from "react-icons/rx";
+import { useNavigate } from "react-router-dom";
 
 function PortfolioCards({ title, image1, image2, image3, key }) {
+  let navigate = useNavigate();
   return (
     <div
       key={key}
@@ -38,7 +40,16 @@ function PortfolioCards({ title, image1, image2, image3, key }) {
           <div className="w-fit rounded-full border border-white/20 -ml-3">
             <RxArrowTopRight className="m-1 text-sm" />
           </div>
-          <Transparent ButtonTitle={"VIEW ALBUM"} />
+          <Transparent
+            onClick={() => {
+              navigate("view-all");
+              window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+              });
+            }}
+            ButtonTitle={"VIEW ALBUM"}
+          />
         </span>
       </span>
     </div>

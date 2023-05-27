@@ -25,7 +25,7 @@ function Home() {
         <DigitalCreative />
       </section>
 
-      <section>
+      <section id="services">
         <OurServices />
       </section>
 

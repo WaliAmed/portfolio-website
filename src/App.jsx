@@ -6,6 +6,8 @@ import Home from "./Pages/MainPages/Home";
 import About from "./Pages/MainPages/About";
 import Footer from "./Components/HeaderFooter/Footer";
 import Portfolio from "./Pages/MainPages/Portfolio";
+import PortfolioMain from "./Pages/MainPages/PortfolioMain";
+import PortfolioAll from "./Pages/MainPages/PortfolioAll";
 export const ThemeContext = createContext();
 
 function App() {
@@ -26,7 +28,10 @@ function App() {
             <>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
-              <Route path="/portfolio" element={<Portfolio />} />
+              <Route path="/portfolio" element={<Portfolio />}>
+                <Route path="" element={<PortfolioMain />} />
+                <Route path="view-all" element={<PortfolioAll />} />
+              </Route>
 
               <Route path="*" element={<Error404 />} />
             </>
