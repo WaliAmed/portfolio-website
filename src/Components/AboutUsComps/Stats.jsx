@@ -1,6 +1,4 @@
-import React from "react";
 import Counter from "../Counter/Counter";
-import PieChart from "../Chart/PieChart";
 import main from "../../assets/Images/Chart/MainCircle.svg";
 import glow from "../../assets/Images/Chart/GlowyCircle.svg";
 import rect from "../../assets/Images/Chart/RectangleBar.svg";

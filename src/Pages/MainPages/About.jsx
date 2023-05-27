@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import { useContext, useEffect } from "react";
 import { ThemeContext } from "../../App";
 import HeadingTags from "../../Components/HeadingTags/HeadingTags";
 import patch2 from "../../assets/Images/patch2.svg";
