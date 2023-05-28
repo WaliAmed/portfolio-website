@@ -1,8 +1,6 @@
-import React from "react";
 import Transparent from "../Buttons/Transparent";
 import { RxArrowTopRight } from "react-icons/rx";
 import { useNavigate } from "react-router-dom";
-import LazyLoad from "react-lazy-load";
 
 function PortfolioCards({ title, image1, image2, image3, keyy }) {
   let navigate = useNavigate();
