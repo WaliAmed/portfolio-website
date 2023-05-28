@@ -8,7 +8,7 @@ function OurServices() {
     <div className="w-full mt-10 lg:mt-0 flex flex-col items-center text-white">
       <h2 className="text-[30px] lg:text-[48px] uppercase">Our Services</h2>
 
-      <div className="w-10/12 py-5 lg:py-10 relative grid grid-cols-1 lg:grid-cols-3 place-items-center gap-y-8">
+      <div className="w-full md:w-10/12 gap-x-10 lg:py-10 relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center place-content-around gap-y-8">
         {OurServicesText?.map((item, index) => {
           return (
             <span key={index} className="z-40">

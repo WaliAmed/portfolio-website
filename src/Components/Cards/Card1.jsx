@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { RxArrowTopRight } from "react-icons/rx";
 import Transparent from "../Buttons/Transparent";
 import { useLocation, useNavigate } from "react-router-dom";
@@ -20,7 +20,7 @@ function Card1({ item, index }) {
   return (
     <div
       style={{ fontFamily: "Satoshi-Regular" }}
-      className="w-11/12 h-[260px] flex flex-col justify-center py-10 px-10 border border-blue-300/30 backdrop-blur-sm bg-[#203764]/10 text-gray-300 z-40 rounded-sm space-y-1"
+      className="w-[350px] md:w-full h-[260px] flex flex-col justify-center py-10 px-10 border border-blue-300/30 backdrop-blur-sm bg-[#203764]/10 text-gray-300 z-40 rounded-sm space-y-1"
     >
       <p style={{ fontFamily: "Satoshi-Regular" }} className="text-xs">
         {index <= 9 ? "0" : null}
