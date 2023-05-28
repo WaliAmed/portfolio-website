@@ -93,13 +93,13 @@ const Footer = () => {
 
                     <li>
                       <a
-                        className="text-gray-300 uppercase transition hover:text-gray-100/75 flex items-center justify-center lg:justify-start"
-                        href="mailto:imanayub@imananiya.com"
+                        className="text-gray-300 uppercase transition hover:text-gray-100/75 flex items-center justify-center lg:justify-start lg:text-left"
+                        href="iacreativedesigns@iacreative-designs.com"
                       >
                         <span className="border border-gray-500/50 rounded-full mr-5">
                           <FiMail className="m-[8px]" />
                         </span>
-                        imanayub@imananiya.com
+                        iacreativedesigns@iacreative-designs.com
                       </a>
                     </li>
                   </ul>
