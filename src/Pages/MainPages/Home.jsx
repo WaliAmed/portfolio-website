@@ -44,7 +44,7 @@ function Home() {
         <FeaturedWork />
       </section>
 
-      <section>
+      <section id="contact">
         <Contact />
       </section>
     </div>

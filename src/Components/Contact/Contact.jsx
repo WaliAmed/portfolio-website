@@ -1,4 +1,3 @@
-import React from "react";
 import FloatingNameTag from "../FloatingNameTag/FloatingNameTag";
 import Buttons from "../Buttons/Buttons";
 
@@ -15,7 +14,7 @@ function Contact() {
           <span className="w-2/3 flex flex-col justify-center leading-[65px]">
             <p className="text-xs">PROJECT IN MIND ?</p>
             <h3 className="text-white/80 satoshi-light text-[50px]">
-              Let's make your
+              Let&apos;s make your
             </h3>
             <h1 className="text-white/80 satoshi-light-italic text-[80px]">
               design shine

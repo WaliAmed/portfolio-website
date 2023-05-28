@@ -8,7 +8,7 @@ function TermsConditions({ setShowTermsModal, TermsText }) {
     >
       <div
         className={
-          "w-11/12 lg:w-[60vw] z-[60] h-full lg:h-fit flex flex-col space-y-3 px-4 lg:px-8 py-10 lg:py-10 border border-gray-200/20 rounded-sm bg-[#2c304d3c] backdrop-blur-md"
+          "w-11/12 lg:w-[60vw] z-[60] h-screen overflow-y-scroll md:overflow-y-visible lg:h-fit flex flex-col space-y-3 px-4 lg:px-8 py-10 lg:py-10 border border-gray-200/20 rounded-sm bg-[#2c304d3c] backdrop-blur-md"
         }
       >
         <h1 className="text-2xl lg:text-[30px] tracking-widest satoshi-medium">

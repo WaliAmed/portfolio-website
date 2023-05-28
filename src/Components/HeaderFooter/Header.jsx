@@ -108,9 +108,9 @@ function Header() {
 
             <NavLink
               end
-              style={({ isActive }) => ({
+              style={{
                 fontFamily: "Satoshi-Regular",
-              })}
+              }}
               className={
                 " text-[16px] hover:border-b-[2px] hover:border-white pt-2 pb-2 px-0 mx-0 transition-colors duration-300"
               }
@@ -136,7 +136,7 @@ function Header() {
             <Buttons
               ButtonTitle={"LET'S TALK"}
               onClick={() => {
-                navigate("/");
+                navigate("/#contact");
               }}
             />
           </span>
