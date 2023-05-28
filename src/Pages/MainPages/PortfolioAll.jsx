@@ -1,6 +1,8 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import HeadingTags from "../../Components/HeadingTags/HeadingTags";
-import PortfolioCardsAll from "../../Components/Cards/PortfolioCardsAll";
+const PortfolioCardsAll = lazy(() =>
+  import("../../Components/Cards/PortfolioCardsAll")
+);
 import { RxArrowTopRight } from "react-icons/rx";
 import Transparent from "../../Components/Buttons/Transparent";
 import { useNavigate } from "react-router-dom";
@@ -164,11 +166,13 @@ function PortfolioAll() {
           {PortfolioCardData?.map((item, index) => {
             return (
               <div key={index}>
-                <PortfolioCardsAll
-                  keyy={index}
-                  title={item.title}
-                  image={item.img}
-                />
+                <Suspense fallback={<div>Loading...</div>}>
+                  <PortfolioCardsAll
+                    keyy={index}
+                    title={item.title}
+                    image={item.img}
+                  />
+                </Suspense>
               </div>
             );
           })}

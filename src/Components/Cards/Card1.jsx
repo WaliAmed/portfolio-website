@@ -1,8 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { RxArrowTopRight } from "react-icons/rx";
 import Transparent from "../Buttons/Transparent";
+import { useLocation, useNavigate } from "react-router-dom";
 
 function Card1({ item, index }) {
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const { hash } = location;
+    if (hash) {
+      const element = document.querySelector(hash);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [location]);
+
   return (
     <div
       style={{ fontFamily: "Satoshi-Regular" }}
@@ -29,10 +43,20 @@ function Card1({ item, index }) {
           <RxArrowTopRight className="m-1 text-xs" />
         </div>
 
-        <Transparent ButtonTitle="VIEW IN PORTFOLIO" />
+        <Transparent
+          onClick={() => {
+            navigate("/portfolio");
+            window.scrollTo({
+              top: 0,
+              behavior: "smooth",
+            });
+          }}
+          ButtonTitle="VIEW IN PORTFOLIO"
+        />
       </div>
     </div>
   );
 }
 
 export default Card1;
+3;

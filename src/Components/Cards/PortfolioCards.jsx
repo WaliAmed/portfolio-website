@@ -2,12 +2,13 @@ import React from "react";
 import Transparent from "../Buttons/Transparent";
 import { RxArrowTopRight } from "react-icons/rx";
 import { useNavigate } from "react-router-dom";
+import LazyLoad from "react-lazy-load";
 
-function PortfolioCards({ title, image1, image2, image3, key }) {
+function PortfolioCards({ title, image1, image2, image3, keyy }) {
   let navigate = useNavigate();
   return (
     <div
-      key={key}
+      key={keyy}
       style={{ fontFamily: "Satoshi-Regular" }}
       className="w-[300px] h-[300px] flex flex-col text-gray-300 z-40 rounded-sm overflow-hidden"
     >
@@ -15,13 +16,15 @@ function PortfolioCards({ title, image1, image2, image3, key }) {
         <img
           src={image1}
           alt=""
-          className="w-60 bg-cover  h-full shadow-lg shadow-gray-500/50 z-20 -mt-1"
+          className="w-60 bg-cover h-full shadow-lg shadow-gray-500/50 z-20 -mt-1"
         />
+
         <img
           src={image2}
           alt=""
           className="w-60 h-full bg-cover -ml-[25%] shadow-lg shadow-gray-500/50 z-10 -mt-1"
         />
+
         <img
           src={image3}
           alt=""

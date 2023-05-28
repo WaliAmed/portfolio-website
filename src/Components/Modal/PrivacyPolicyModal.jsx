@@ -15,7 +15,7 @@ function PrivacyPolicyModal({
         className={
           showModal === 1
             ? "w-11/12 lg:w-[60vw] lg:h-[65vh] space-y-10 text-center flex flex-col items-center justify-center py-10 px-5 lg:p-5 border border-gray-200/20 rounded-sm bg-[#2c304d3c] backdrop-blur-md"
-            : "w-11/12 lg:w-[65vw] h-[67vh] flex flex-col px-8 py-10 border border-gray-200/20 rounded-sm bg-[#2c304d3c] backdrop-blur-md"
+            : "w-11/12 lg:w-[65vw] h-fit flex flex-col px-8 py-10 border border-gray-200/20 rounded-sm bg-[#2c304d3c] backdrop-blur-md"
         }
       >
         {showModal === 1 ? (

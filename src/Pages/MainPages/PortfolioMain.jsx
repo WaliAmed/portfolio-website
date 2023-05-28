@@ -1,6 +1,10 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import HeadingTags from "../../Components/HeadingTags/HeadingTags";
-import PortfolioCards from "../../Components/Cards/PortfolioCards";
+
+const PortfolioCards = lazy(() =>
+  import("../../Components/Cards/PortfolioCards")
+);
+
 import { RxArrowTopRight } from "react-icons/rx";
 import Transparent from "../../Components/Buttons/Transparent";
 import { useNavigate } from "react-router-dom";
@@ -16,6 +20,7 @@ import CIL3 from "../../assets/Images/Portfolio/CoupleIllustration/CIL3.svg";
 import ILS1 from "../../assets/Images/Portfolio/Illustrations/ILS1.svg";
 import ILS2 from "../../assets/Images/Portfolio/Illustrations/ILS2.svg";
 import ILS3 from "../../assets/Images/Portfolio/Illustrations/ILS3.svg";
+
 import Logo1 from "../../assets/Images/Portfolio/Logos/Logo1.svg";
 import Logo2 from "../../assets/Images/Portfolio/Logos/Logo2.svg";
 import Logo3 from "../../assets/Images/Portfolio/Logos/Logo3.svg";
@@ -116,13 +121,15 @@ function PortfolioMain() {
           {PortfolioCardData?.map((item, index) => {
             return (
               <>
-                <PortfolioCards
-                  key={index}
-                  title={item.title}
-                  image1={item.img1}
-                  image2={item.img2}
-                  image3={item.img3}
-                />
+                <Suspense fallback={<div>Loading...</div>}>
+                  <PortfolioCards
+                    keyy={index}
+                    title={item.title}
+                    image1={item.img1}
+                    image2={item.img2}
+                    image3={item.img3}
+                  />
+                </Suspense>
               </>
             );
           })}
