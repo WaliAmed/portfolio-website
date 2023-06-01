@@ -101,11 +101,11 @@ export const PaymentText = [
     point2:
       "After you have confirmed your order with us on whatsapp, you can make your online payment on any one of the following:",
     h1: "bank transfer",
-    bankName: "xxxxx",
-    accountName: "xxxxx",
-    iban: "xxxxx",
-    epAccountName: "xxxxx",
-    phoneNumber: "03xxxxxxxxx",
+    bankName: "MCB",
+    accountName: "Iman Ayub",
+    iban: "PK85MUCB0614853251003093",
+    epAccountName: "EASYPAISA: Iman Ayub / JAZZCASH: Iman",
+    phoneNumber: "EASYPAISA: +923277844161 / JAZZCASH: +923277844161",
     desc: "send the screenshot of payment as proof to book your order on whatsapp.",
     rPoint1:
       "YOU CAN CANCEL YOUR ORDER IN THE FIRST 24 HOURS AND your payment will be fully refunded.",
