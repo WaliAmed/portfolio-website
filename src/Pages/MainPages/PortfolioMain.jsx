@@ -40,6 +40,7 @@ import Web3 from "../../assets/Images/Portfolio/WebUI/Web3.svg";
 function PortfolioMain() {
   const PortfolioCardData = [
     {
+      id: "branding",
       title: "Branding & Packaging",
       img1: Branding1,
       img2: Branding2,
@@ -47,43 +48,50 @@ function PortfolioMain() {
     },
 
     {
+      id: "CIL",
       title: "COUPLE ILLUSTRATIONS",
       img1: CIL1,
       img2: CIL2,
       img3: CIL3,
     },
     {
+      id: "illustrations",
       title: "ILLUSTRATIONS",
       img1: ILS1,
       img2: ILS2,
       img3: ILS3,
     },
     {
+      id: "logos",
       title: "LOGOS",
       img1: Logo1,
       img2: Logo2,
       img3: Logo3,
     },
     {
+      id: "painting",
       title: "CALLIGRAPHY & PAINTING",
       img1: Painting1,
       img2: Painting2,
       img3: Painting3,
     },
     {
+      id: "social",
       title: "SOCIAL MEDIA",
       img1: Social1,
       img2: Social2,
       img3: Social3,
     },
     {
+      id: "portraiture",
       title: "POTRAITURES",
       img1: Pot1,
       img2: Pot2,
       img3: Pot3,
     },
     {
-      title: "WEB DESIGN & UX/UX",
+      id: "web",
+      title: "WEB DESIGN & UI/UX",
       img1: Web1,
       img2: Web2,
       img3: Web3,
@@ -124,6 +132,7 @@ function PortfolioMain() {
                 <Suspense fallback={<div>Loading...</div>}>
                   <PortfolioCards
                     keyy={index}
+                    id={item.id}
                     title={item.title}
                     image1={item.img1}
                     image2={item.img2}

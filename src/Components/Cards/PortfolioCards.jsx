@@ -2,7 +2,7 @@ import Transparent from "../Buttons/Transparent";
 import { RxArrowTopRight } from "react-icons/rx";
 import { useNavigate } from "react-router-dom";
 
-function PortfolioCards({ title, image1, image2, image3, keyy }) {
+function PortfolioCards({ title, image1, image2, image3, keyy, id }) {
   let navigate = useNavigate();
   return (
     <div
@@ -43,11 +43,7 @@ function PortfolioCards({ title, image1, image2, image3, keyy }) {
           </div>
           <Transparent
             onClick={() => {
-              navigate("view-all");
-              window.scrollTo({
-                top: 0,
-                behavior: "smooth",
-              });
+              navigate(`view-all/#${id}`);
             }}
             ButtonTitle={"VIEW ALBUM"}
           />

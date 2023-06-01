@@ -1,8 +1,7 @@
-import React, { lazy, Suspense } from "react";
 import HeadingTags from "../../Components/HeadingTags/HeadingTags";
-const PortfolioCardsAll = lazy(() =>
-  import("../../Components/Cards/PortfolioCardsAll")
-);
+
+import PortfolioCardsAll from "../../Components/Cards/PortfolioCardsAll";
+
 import { RxArrowTopRight } from "react-icons/rx";
 import Transparent from "../../Components/Buttons/Transparent";
 import { useNavigate } from "react-router-dom";
@@ -75,23 +74,28 @@ import Web6 from "../../assets/Images/Portfolio/WebUI/Web6.svg";
 function PortfolioAll() {
   const PortfolioCardData = [
     {
+      id: "branding",
       title: "Branding & Packaging",
       img: [Branding1, Branding2, Branding3, Branding4],
     },
 
     {
+      id: "CIL",
       title: "COUPLE ILLUSTRATIONS",
       img: [CIL1, CIL2, CIL3, CIL4, CIL5, CIL6],
     },
     {
+      id: "illustrations",
       title: "ILLUSTRATIONS",
       img: [ILS1, ILS2, ILS3, ILS4, ILS5, ILS6, ILS7, ILS8, ILS9, ILS10],
     },
     {
+      id: "logos",
       title: "LOGOS",
       img: [Logo1, Logo2, Logo3, Logo4, Logo5, Logo6, Logo7],
     },
     {
+      id: "painting",
       title: "CALLIGRAPHY & PAINTING",
       img: [
         Painting1,
@@ -110,14 +114,17 @@ function PortfolioAll() {
       ],
     },
     {
+      id: "social",
       title: "SOCIAL MEDIA",
       img: [Social1, Social2, Social3],
     },
     {
+      id: "portraiture",
       title: "POTRAITURES",
       img: [Pot1, Pot2, Pot3, Pot4, Pot5, Pot6],
     },
     {
+      id: "web",
       title: "WEB DESIGN & UX/UX",
       img: [Web1, Web2, Web3, Web4, Web5, Web6],
     },
@@ -166,13 +173,12 @@ function PortfolioAll() {
           {PortfolioCardData?.map((item, index) => {
             return (
               <div key={index}>
-                <Suspense fallback={<div>Loading...</div>}>
-                  <PortfolioCardsAll
-                    keyy={index}
-                    title={item.title}
-                    image={item.img}
-                  />
-                </Suspense>
+                <PortfolioCardsAll
+                  id={item.id}
+                  keyy={index}
+                  title={item.title}
+                  image={item.img}
+                />
               </div>
             );
           })}

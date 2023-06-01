@@ -18,6 +18,7 @@ function Home() {
   useEffect(() => {
     setHeaderShow(true);
   }, []);
+
   return (
     <div className="w-full">
       <section>

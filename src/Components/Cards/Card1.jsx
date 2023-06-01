@@ -3,19 +3,21 @@ import { RxArrowTopRight } from "react-icons/rx";
 import Transparent from "../Buttons/Transparent";
 import { useLocation, useNavigate } from "react-router-dom";
 
-function Card1({ item, index }) {
-  const location = useLocation();
+function Card1({ item, index, rd }) {
+  // const location = useLocation();
   const navigate = useNavigate();
 
-  useEffect(() => {
-    const { hash } = location;
-    if (hash) {
-      const element = document.querySelector(hash);
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
-      }
-    }
-  }, [location]);
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     const { hash } = location;
+  //     if (hash) {
+  //       const element = document.querySelector(hash);
+  //       if (element) {
+  //         element.scrollIntoView({ behavior: "smooth" });
+  //       }
+  //     }
+  //   }, 1500);
+  // }, [location]);
 
   return (
     <div
@@ -45,11 +47,7 @@ function Card1({ item, index }) {
 
         <Transparent
           onClick={() => {
-            navigate("/portfolio");
-            window.scrollTo({
-              top: 0,
-              behavior: "smooth",
-            });
+            navigate(`/portfolio/view-all/#${rd}`);
           }}
           ButtonTitle="VIEW IN PORTFOLIO"
         />

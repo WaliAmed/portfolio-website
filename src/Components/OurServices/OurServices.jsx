@@ -12,7 +12,7 @@ function OurServices() {
         {OurServicesText?.map((item, index) => {
           return (
             <span key={index} className="z-40">
-              <Card1 item={item} index={index} />
+              <Card1 item={item} index={index} rd={item.rd} />
             </span>
           );
         })}

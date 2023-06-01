@@ -1,8 +1,8 @@
 import React from "react";
 
-function PortfolioCardsAll({ title, image, keyy }) {
+function PortfolioCardsAll({ title, image, keyy, id }) {
   return (
-    <div className="w-full mb-[16vh]">
+    <div id={id} className="w-full mb-[16vh]">
       <div className="w-full flex justify-between">
         <h1 className="satoshi-light ml-[1.5%]">{title}</h1>{" "}
         <p
