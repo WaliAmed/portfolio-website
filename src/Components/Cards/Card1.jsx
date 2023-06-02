@@ -4,20 +4,20 @@ import Transparent from "../Buttons/Transparent";
 import { useLocation, useNavigate } from "react-router-dom";
 
 function Card1({ item, index, rd }) {
-  // const location = useLocation();
+  const location2 = useLocation();
   const navigate = useNavigate();
 
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     const { hash } = location;
-  //     if (hash) {
-  //       const element = document.querySelector(hash);
-  //       if (element) {
-  //         element.scrollIntoView({ behavior: "smooth" });
-  //       }
-  //     }
-  //   }, 1500);
-  // }, [location]);
+  useEffect(() => {
+    const { hash } = location2;
+    if (hash) {
+      const element = document.querySelector(hash);
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: "smooth" });
+        }, 4000);
+      }
+    }
+  }, [location2]);
 
   return (
     <div
