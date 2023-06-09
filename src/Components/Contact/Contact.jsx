@@ -1,7 +1,69 @@
 import FloatingNameTag from "../FloatingNameTag/FloatingNameTag";
 import Buttons from "../Buttons/Buttons";
+import React from "react";
+import toast from "react-hot-toast";
 
 function Contact() {
+  const [email, setEmail] = React.useState("");
+  const [message, setMessage] = React.useState("");
+  const apiUrl = "http://localhost:3001/";
+
+  const SendEmail = () => {
+    const cookieValue = getCookieValue("timer"); // Replace 'timer' with your actual cookie name
+    const minutesRemaining = cookieValue ? parseInt(cookieValue, 10) : 0;
+    if (minutesRemaining <= 0) {
+      var myHeaders = new Headers();
+      myHeaders.append("Content-Type", "application/json");
+
+      var raw = JSON.stringify({
+        from_email: email,
+        to_email: "iacreativedesigns@iacreative-designs.com",
+        subject: "CONTACT US FORM EMAIL",
+        text: message,
+      });
+
+      var requestOptions = {
+        method: "POST",
+        headers: myHeaders,
+        body: raw,
+        redirect: "follow",
+      };
+
+      fetch(apiUrl + "form-email", requestOptions)
+        .then((response) => response.text())
+        .then((result) => {
+          if (result === "Email sent successfully") {
+            notify();
+            setMessage("");
+            setEmail("");
+
+            // Set the cookie with a 30-second expiry time
+            const expirationDate = new Date();
+            expirationDate.setTime(expirationDate.getTime() + 30 * 1000); // 30 seconds in milliseconds
+            document.cookie = `timer=30; expires=${expirationDate.toUTCString()}`;
+          }
+        })
+        .catch((error) => console.log("error", error));
+    } else {
+      error();
+    }
+  };
+
+  const notify = () => toast.success("Email sent successfully!");
+  const error = () => toast.error("Wait 30 seconds to send another email!");
+  const customError = (message) => toast.error(message);
+
+  const getCookieValue = (name) => {
+    const cookies = document.cookie.split(";");
+    for (let i = 0; i < cookies.length; i++) {
+      const cookie = cookies[i].trim();
+      if (cookie.startsWith(name + "=")) {
+        return cookie.substring(name.length + 1);
+      }
+    }
+    return null;
+  };
+
   return (
     <div className="w-full pb-10 lg:pb-0 border-t lg:border-t-none border-gray-300/70">
       <div className="w-full hidden lg:flex whitespace-nowrap space-x-5 p-3 border border-blue-300/20 backdrop-blur-lg bg-white/10 ">
@@ -39,6 +101,9 @@ function Contact() {
             <input
               type="email"
               className="p-1 w-full border border-blue-300/20 backdrop-blur-lg bg-white/10"
+              onChange={(e) => setEmail(e.target.value)}
+              value={email}
+              placeholder="example@gmail.com"
             />
           </span>
 
@@ -55,10 +120,25 @@ function Contact() {
               id="message"
               cols="30"
               rows="6"
+              onChange={(e) => setMessage(e.target.value)}
+              value={message}
+              placeholder="Please write your message..."
             ></textarea>
           </span>
           <span className="w-11/12 lg:w-2/3 mt-2 lg:mt-5 flex justify-end">
-            <Buttons ButtonTitle="SEND" />
+            <Buttons
+              ButtonTitle="SEND"
+              onClick={() => {
+                const emailRegex =
+                  /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+                if (email === "" || !emailRegex.test(email))
+                  customError("Pleae enter a valid email address");
+                else if (message === "")
+                  customError("Pleae enter your message");
+                else SendEmail();
+              }}
+            />
           </span>
         </div>
       </div>

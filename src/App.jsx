@@ -1,4 +1,4 @@
-import React, { createContext, useState } from "react";
+import { createContext, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./Components/HeaderFooter/Header";
 import Error404 from "./Pages/ExtraPages/Error404";
@@ -8,6 +8,7 @@ import Footer from "./Components/HeaderFooter/Footer";
 import Portfolio from "./Pages/MainPages/Portfolio";
 import PortfolioMain from "./Pages/MainPages/PortfolioMain";
 import PortfolioAll from "./Pages/MainPages/PortfolioAll";
+import { Toaster } from "react-hot-toast";
 export const ThemeContext = createContext();
 
 function App() {
@@ -23,7 +24,7 @@ function App() {
       >
         <Router>
           {headerShow === true ? <Header /> : null}
-
+          <Toaster />
           <Routes key={document.pathname}>
             <>
               <Route path="/" element={<Home />} />

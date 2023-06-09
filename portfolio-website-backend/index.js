@@ -1,42 +1,45 @@
 const express = require("express");
-const sgMail = require("@sendgrid/mail");
 require("dotenv").config();
-
+const cors = require("cors");
 const app = express();
-
 app.use(express.json());
 
-// SendGrid Setup
-sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+// Mailchimp Setup
+const nodemailer = require("nodemailer");
+app.use(cors({ origin: "*" }));
+app.post("/form-email", async (req, res) => {
+  const { from_email, to_email, subject, text } = req.body;
 
-app.get("/", (req, res) => {
-  res.send("Iman Aniya");
-});
+  // Create a transporter using your Gmail account
+  const transporter = nodemailer.createTransport({
+    service: "gmail",
+    auth: {
+      user: "iacreativedesigns11@gmail.com",
+      pass: process.env.EMAIL_API_KEY,
+    },
+  });
 
-app.post("/email", (req, res) => {
-  const { to_email, subject, text } = req.body;
-  console.log(req.body);
-  const msg = {
+  // Define the email options
+  const mailOptions = {
+    from: from_email,
     to: to_email,
-    from: "waliamedvd@gmail.com", // Change to your verified sender
     subject: subject,
     text: text,
   };
 
-  sgMail
-    .send(msg)
-    .then(() => {
-      console.log("Email sent");
-      res.sendStatus(200);
-    })
-    .catch((error) => {
-      console.error(error);
-      res.sendStatus(500);
-    });
+  try {
+    // Send the email
+    const info = await transporter.sendMail(mailOptions);
+    console.log("Email sent:", info.response);
+    res.send("Email sent successfully");
+  } catch (error) {
+    console.log("Error occurred:", error);
+    res.status(500).send("An error occurred while sending the email");
+  }
 });
 
 // Start the server
-const port = 3000; // You can use any available port
+const port = 3001; // You can use any available port
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
